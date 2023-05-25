@@ -1,0 +1,35 @@
+.footer{
+    overflow: hidden;
+    background-color: rgb(90, 164, 190);
+    padding: 20px 20px;   
+    position: sticky;
+    top: 100%;
+    margin-top: 30px;
+}
+
+h1{
+    font-weight: bold;
+    color :aliceblue;
+    font-size: 20px;
+}
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 17px;
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
+i{
+    padding: 0px 10px;
+}
+
+p{
+    color:aliceblue;
+    size: 14px;
+}
+

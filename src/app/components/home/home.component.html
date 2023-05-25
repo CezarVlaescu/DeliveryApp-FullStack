@@ -1,0 +1,53 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Hungry? Command now! <br/> Your delicious friend</h1>
+    <a href="restaurants">Check out our restaurants <i class="fa fa-arrow-right"></i></a>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-center mb-4">Check out <span class="highlight">the steps!</span></h1>
+    <div class="row">
+        <div class="col lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>Select your restaurant</p>
+            </div> 
+        </div>
+        <div class="col lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>Shop your favorite food!</p>
+            </div> 
+        </div>
+        <div class="col lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>Go to checkout</p>
+            </div> 
+        </div>
+        <div class="col lg-4 mt-2">
+            <div class="stepBox">
+                <h1>4</h1>
+                <p>Enjoy</p>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">favorite food</span></h1>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of foodData; index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.image}}">
+                <h1>{{fd.name}}</h1>
+                <h1>{{fd.description}}</h1>
+                <h1>{{fd.price | currency:'EUR'}}</h1>
+                <h1>By {{fd.restaurantby}}</h1>
+            </div>
+
+        </div>
+    </div>
+    <a routerLink="restaurants" href="restaurants" class="viewmorebtn">View More <i class="fa fa-arrow-right"></i></a>
+</div>

@@ -1,0 +1,22 @@
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Our <span class="highlight">Restaurants</span></h1>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let rs of restaurantsData; index as i">
+            <div class="foodbox mt-3 mb-3">
+                <article class="delivery-card"></article>
+                <img src="{{rs.image}}">
+                <h1>{{rs.name}}</h1>
+                <h1>{{rs.description}}</h1>
+                <div class="delivery">
+                    <h1>Standard Delivery Max Distance : {{rs.standardDeliveryMaxDist | currency: 'EUR'}}</h1>
+                    <h1>Standard Delivery Price : {{rs.standardDeliveryPrice | currency: 'EUR'}}</h1>
+                    <h1>{{getRestaurantStatus()}}</h1>
+                    <h1>Open : {{rs.dayProgram}} from {{rs.openHour}}:00 to {{rs.closedHour}}:00</h1>
+                </div>             
+                <a routerLink="menu" href="menu" class="viewmorebtn">View Menu<i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---[disabled]="isRestaurantClosed(restaurant)-check if the restaurants are closed and cannot be accesed---> 
